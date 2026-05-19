@@ -1,38 +1,49 @@
-# az-store
+# A&Z Store
 
-This template should help get you started developing with Vue 3 in Vite.
+Modern E-Commerce web application built using Vue.js and Supabase.
 
-## Recommended IDE Setup
+## Live Demo
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+https://az-store961.netlify.app/
 
-## Recommended Browser Setup
+## Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+* User Authentication System
+* Responsive Design
+* Dynamic Product Display
+* Shopping Cart Functionality
+* Interactive UI Components
+* Modern UI/UX Design
+* Supabase Integration
+* Admin Dashboard
 
-## Customize configuration
+## Technologies Used
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+* Vue.js
+* JavaScript
+* Supabase
+* HTML5 / CSS3
+* Bootstrap
+* Vite
 
-## Project Setup
+## Project Overview
 
-```sh
+A&Z Store is a modern e-commerce web application focused on creating a clean, responsive, and user-friendly shopping experience. The project includes authentication flows, dynamic product management, and responsive layouts optimized for desktop and mobile devices.
+
+## Installation
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Run Development Server
 
-```sh
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+## Build for Production
 
-```sh
+```bash
 npm run build
 ```
