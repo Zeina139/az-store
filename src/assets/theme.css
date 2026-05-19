@@ -1,0 +1,66 @@
+/* ===== Light Mode ===== */
+:root {
+  --bg: #fff7fa;
+  --card-bg: #ffffff;
+  --primary: #f8a5c2;       /* Baby Pink Base */
+  --primary-dark: #e75480;
+  --accent-light: #ffe3ec;
+  --text: #2c1b22;
+  --muted: #a16b7c;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  --bg: #1a0f14;
+  --card-bg: #2a1820;
+  --primary: #ff8fb1;
+  --primary-dark: #ff4d88;
+  --accent-light: #3a2029;
+  --text: #ffffff;
+  --muted: #ffd6e2; 
+}
+body.dark-mode .card {
+  background: #2a1820;
+  color: #ffffff;
+}
+
+body.dark-mode .card p {
+  color: #ffd6e2;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(248, 165, 194, 0.25);
+}
+
+/* Button */
+.btn-baby {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-baby:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
