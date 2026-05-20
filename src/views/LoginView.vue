@@ -36,7 +36,7 @@ const handleLogin = async () => {
   router.push(redirect || "/")
 }
 
-// إضافة المنتج المعلق بعد login
+
 onMounted(async () => {
   const pending = localStorage.getItem("pendingProduct")
   if (pending) {

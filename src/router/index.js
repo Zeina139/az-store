@@ -46,11 +46,9 @@ const router = createRouter({
   ],
 });
 
-// 🔥 Guard احترافي بدون supabase calls
 router.beforeEach(async (to) => {
   const auth = useAuthStore();
 
-  // تأكد أولًا أن الـ auth store تم تهيئته
   if (!auth.user.value && !auth.loading.value) {
     await auth.init();
   }

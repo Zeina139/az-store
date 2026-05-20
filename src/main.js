@@ -15,7 +15,6 @@ app.use(router);
 
 app.mount("#app");
 
-// initialize cart
 import { useCartStore } from "./stores/cart";
 const cart = useCartStore();
 cart.loadCart();

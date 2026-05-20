@@ -17,21 +17,21 @@ onMounted(() => {
   cartStore.loadCart()
 })
 
-// تحويل أرقام عربية → إنجليزية
+
 function arabicToEnglishNumbers(str) {
   const arabic = '٠١٢٣٤٥٦٧٨٩';
   const english = '0123456789';
   return str.replace(/[٠-٩]/g, d => english[arabic.indexOf(d)]);
 }
 
-// التحقق من صحة رقم الهاتف
+
 function validatePhone(number) {
   const num = arabicToEnglishNumbers(number);
-  const phoneRegex = /^09\d{8}$/; // 09 + 8 أرقام
+  const phoneRegex = /^09\d{8}$/; 
   return phoneRegex.test(num);
 }
 
-// مراقبة الرقم مباشرة
+
 watch(phone, (newVal) => {
   phone.value = arabicToEnglishNumbers(newVal)
   if (!phone.value) {
@@ -184,14 +184,14 @@ const placeOrder = async () => {
   text-align:center;
 }
 
-/* grid */
+
 .checkout-grid{
   display:grid;
   grid-template-columns:2fr 1fr;
   gap:30px;
 }
 
-/* form */
+
 .checkout-form{
   background:var(--card-bg);
   padding:25px;

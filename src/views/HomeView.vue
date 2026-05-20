@@ -12,12 +12,12 @@ const products = ref([])
 const loading = ref(true)
 const categories = ref([])
 
-// 🔥 Toast (كان ناقص)
+
 const showToast = ref(false)
 const toastMessage = ref("")
 const toastType = ref("success")
 
-// 🔍 search debounce
+
 const searchInput = ref("")
 const search = ref("")
 let timeout = null
@@ -29,13 +29,13 @@ watch(searchInput, (val) => {
   }, 300)
 })
 
-// 🎯 filters
+
 const selectedCategory = ref("all")
 const sortOption = ref("default")
 
-// 🧠 filtered
+
 const filteredProducts = computed(() => {
-  let filtered = [...products.value] // 🔥 fix reference bug
+  let filtered = [...products.value] 
 
   // category
   if (selectedCategory.value !== "all") {
@@ -61,7 +61,7 @@ const filteredProducts = computed(() => {
   return filtered
 })
 
-// 📦 fetch data (محسّن)
+
 onMounted(async () => {
   loading.value = true
 
@@ -80,7 +80,6 @@ onMounted(async () => {
   } catch (error) {
     console.error("Fetch error:", error)
 
-    // 🔥 toast error
     toastMessage.value = "حدث خطأ أثناء تحميل البيانات"
     toastType.value = "error"
     showToast.value = true

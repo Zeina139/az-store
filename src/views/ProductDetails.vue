@@ -37,14 +37,13 @@ const addToCart = async () => {
 
   const { data: { user } } = await supabase.auth.getUser()
 
-  // ❌ مو مسجل
+
 if (!user) {
   localStorage.setItem("pendingProduct", JSON.stringify(product.value))
   showAuthModal.value = true
   return
 }
 
-  // ✅ مسجل
   await cartStore.addToCart(product.value)
 
   alert("تمت إضافة المنتج إلى السلة 🛒")

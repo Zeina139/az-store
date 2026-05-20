@@ -6,7 +6,7 @@ import { useAuthStore } from "@/stores/auth"
 const auth = useAuthStore()
 
 onMounted(async () => {
-  await auth.init(); // ✅ تأكد إنه session جاهز قبل أي شيء
+  await auth.init(); 
 });
 </script>
 

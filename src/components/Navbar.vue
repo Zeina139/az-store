@@ -15,22 +15,21 @@ const menuOpen = ref(false)
 const accountOpen = ref(false) // خليها false افتراضياً
 const accountDropdownRef = ref(null)
 
-// 🔹 Toggle Theme
+
 const toggleTheme = () => {
   darkMode.value = !darkMode.value
   document.body.classList.toggle("dark-mode")
   localStorage.setItem("theme", darkMode.value ? "dark" : "light")
 }
 
-// 🔹 Toggle Menu
+
 const toggleMenu = () => menuOpen.value = !menuOpen.value
 const closeMenu = () => menuOpen.value = false
 
-// 🔹 Toggle Account Dropdown
 const toggleAccount = () => accountOpen.value = !accountOpen.value
 const closeAccount = () => accountOpen.value = false
 
-// 🔹 Logout
+
 const handleLogout = async () => {
   try {
     await logout()
@@ -41,14 +40,13 @@ const handleLogout = async () => {
   }
 }
 
-// 🔹 إغلاق dropdown عند الضغط خارج العنصر
+
 const handleClickOutside = (e) => {
   if (accountDropdownRef.value && !accountDropdownRef.value.contains(e.target)) {
     accountOpen.value = false
   }
 }
 
-// 🔹 Watchers
 onMounted(() => {
   document.addEventListener("click", handleClickOutside)
   
@@ -65,18 +63,17 @@ onBeforeUnmount(() => {
   document.removeEventListener("click", handleClickOutside)
 })
 
-// 🔹 إغلاق القائمة والـ dropdown عند تغيير الصفحة
+
 watch(route, () => {
   menuOpen.value = false
   accountOpen.value = false
 })
 
-// 🔹 منع scroll عند فتح المينيو
 watch(menuOpen, (val) => {
   document.body.style.overflow = val ? "hidden" : "auto"
 })
 
-// 🔹 مراقبة حالة المستخدم لإغلاق dropdown بعد logout
+
 watch(() => auth.user.value, (newVal) => {
   if (!newVal) accountOpen.value = false
 })

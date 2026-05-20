@@ -132,7 +132,7 @@ h1 {
   border-radius: 12px;
 }
 
-/* معلومات المنتج */
+
 .cart-info {
   flex: 1;
   display: flex;
@@ -170,7 +170,6 @@ h1 {
   color: var(--primary-dark);
 }
 
-/* كمية المنتج */
 .quantity {
   display: flex;
   align-items: center;
