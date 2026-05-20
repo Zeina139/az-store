@@ -15,7 +15,7 @@ const form = ref({
   price:"",
   description:"",
   image:"",
-  category_id:"" // 🔥 أضفناها
+  category_id:"" 
 })
 const isEdit = ref(false)
 

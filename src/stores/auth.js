@@ -21,7 +21,6 @@ export function useAuthStore() {
       await loadRole();
     }
 
-    // 🔹 متابعة أي تغيير بالحالة (login / logout / refresh)
     supabase.auth.onAuthStateChange(async (event, session) => {
       user.value = session?.user || null;
       if (user.value) {

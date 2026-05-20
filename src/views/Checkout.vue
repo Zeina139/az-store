@@ -148,7 +148,6 @@ const placeOrder = async () => {
       <textarea v-model="address" placeholder="العنوان"></textarea>
     </div>
 
-    <!-- SUMMARY -->
     <div class="order-summary">
       <h3>ملخص الطلب</h3>
       <div v-for="item in cartStore.items" :key="item.id" class="summary-item">
@@ -224,7 +223,7 @@ const placeOrder = async () => {
   left: 0;
 }
 
-/* summary */
+
 .order-summary{
   background:var(--card-bg);
   padding:25px;
@@ -246,7 +245,7 @@ const placeOrder = async () => {
   margin:15px 0;
 }
 
-/* button */
+
 .order-btn{
   width:100%;
   padding:12px;
@@ -263,7 +262,6 @@ const placeOrder = async () => {
   transform:scale(1.03);
 }
 
-/* mobile */
 @media (max-width:900px){
   .checkout-grid{
     grid-template-columns:1fr;

@@ -141,12 +141,12 @@ export const useCartStore = defineStore("cart", {
       if (!user) return;
 
       const oldItems = [...this.items];
-      this.items = []; // حذف فوري من UI
+      this.items = [];
 
       try {
         await supabase.from("cart").delete().eq("user_id", user.id);
       } catch {
-        this.items = oldItems; // rollback إذا فشل
+        this.items = oldItems;
       }
     },
   },

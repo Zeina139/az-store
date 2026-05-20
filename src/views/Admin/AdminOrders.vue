@@ -7,7 +7,6 @@ const loading = ref(true)
 const search = ref("")
 const filterStatus = ref("all")
 
-// جلب كل الطلبات مع اسم المستخدم
 async function loadOrders() {
   loading.value = true
 
@@ -47,7 +46,7 @@ const updateStatus = async (orderId, newStatus) => {
     return
   }
 
-  // تحديث الحالة محليًا بدل إعادة تحميل كل الطلبات
+
   const order = orders.value.find(o => o.id === orderId)
   if(order) order.status = newStatus
 }

@@ -1,4 +1,3 @@
-<!--CartView-->
 <script setup>
 import { onMounted, computed } from "vue";
 import { useCartStore } from "@/stores/cart";
@@ -9,7 +8,7 @@ onMounted(() => {
   cartStore.loadCart();
 });
 
-// حساب المجموع
+
 const total = computed(() =>
   cartStore.items.reduce(
     (sum, item) => sum + item.product.price * item.quantity,
@@ -110,7 +109,7 @@ h1 {
   gap: 15px;
 }
 
-/* بطاقة المنتج */
+
 .cart-card {
   display: flex;
   gap: 15px;
